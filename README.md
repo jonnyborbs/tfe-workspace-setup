@@ -6,8 +6,7 @@ Published 1/30/2020 at the requests of HashiCorp webinar participants from https
 This configuration assumes you already have a Terraform Cloud/Enterprise account created and a workspace already exists.
 
 To authenticate against Terraform Cloud you must have a `.terraformrc` file configured, containing the following:
-```
-JSON
+```hcl
 credentials "app.terraform.io" {
   token = "your-terraform-cloud-token-here"
 }```
