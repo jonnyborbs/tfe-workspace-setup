@@ -9,7 +9,8 @@ To authenticate against Terraform Cloud you must have a `.terraformrc` file conf
 ```hcl
 credentials "app.terraform.io" {
   token = "your-terraform-cloud-token-here"
-}```
+}
+```
 
 The token required can be obtained from the User Settings > Tokens section within your Terraform Cloud account
 
