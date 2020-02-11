@@ -51,6 +51,7 @@ abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd112341
 abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd1=
 -----YOUR PRIVATE KEY ENDS-----
 EOT
+  description  = "RSA Private Key"
   category     = "terraform"
   sensitive    = "true"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
@@ -62,6 +63,7 @@ EOT
 resource "tfe_variable" "public_key" {
   key          = "public_key"
   value        = "key-format abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd112341abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd112341abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd112341abcdabcdabcd112341234abcdabcdabcdabcdabcd112341234abcdabcdabcdabcdabcd112341"
+  description  = "RSA Public Key"
   category     = "terraform"
   sensitive    = "true"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
@@ -72,6 +74,7 @@ resource "tfe_variable" "public_key" {
 resource "tfe_variable" "slack_webhook_url" {
   key          = "slack_webhook_url"
   value        = "https://your.slack.webhook.URL.goes.here"
+  description  = "Slack Webhook URL for notification module"
   sensitive    = "true"
   category     = "terraform"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
@@ -83,6 +86,7 @@ resource "tfe_variable" "slack_webhook_url" {
 resource "tfe_variable" "aws_secret_access_key" {
   key          = "AWS_SECRET_ACCESS_KEY"
   value        = "YOUR_AWS_KEY_GOES_HERE"
+  description  = "AWS Secret Key"
   sensitive    = "true"
   category     = "env"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
@@ -93,6 +97,7 @@ resource "tfe_variable" "aws_secret_access_key" {
 resource "tfe_variable" "aws_access_key_id" {
   key          = "AWS_ACCESS_KEY_ID"
   value        = "YOUR_AWS_KEY_ID_GOES_HERE"
+  description  = "AWS Key ID"
   sensitive    = "true"
   category     = "env"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
@@ -103,6 +108,7 @@ resource "tfe_variable" "aws_access_key_id" {
 resource "tfe_variable" "aws_default_region" {
   key          = "AWS_DEFAULT_REGION"
   value        = "us-east-1"
+  description  = "AWS Default Region"
   category     = "env"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
 
@@ -112,6 +118,7 @@ resource "tfe_variable" "aws_default_region" {
 resource "tfe_variable" "confirm_destroy" {
   key          = "CONFIRM_DESTROY"
   value        = "1"
+  description  = "Allow destruction of created resources"
   category     = "env"
   workspace_id = data.tfe_workspace.tfe-wrapper-test.id
 
