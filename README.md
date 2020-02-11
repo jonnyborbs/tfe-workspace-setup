@@ -17,3 +17,5 @@ The token required can be obtained from the User Settings > Tokens section withi
 Once you have this configuration, you can simply run a `terraform init` to download the TFE provider, followed by a `terraform plan` and `terraform apply` as normal to create the workspace configuration.
 
 Additional documentation is provided within `main.tf` itself.
+
+Also, this configuration now assumes you have >v0.12 of the `tfe` provider, as it now includes variable descriptions which are unsupported in prior versions
